@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.board {
+  display: grid;
+  gap: 2px; /* Small gap between squares */
+  width: 320px; /* Increase width for better spacing */
+  height: 320px; /* Ensure the board has a square shape */
+  margin: auto; /* Center the board horizontally */
+  background-color: #222; /* Dark background color */
+  border-radius: 10px; /* Rounded corners for the board */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Square Styling */
+.square {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners for each square */
+  background-color: #f0f0f0; /* Light gray background by default */
+}
+
+/* Hover effect for squares */
+
+/* Snake Square Styling */
+.square.snake {
+  background-color: #4caf50; /* Snake color - green */
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.6); /* Green glow effect */
+}
+
+/* Game Over Message Styling */
+.game-over-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Soft shadow for the game over message */
+  z-index: 1000; /* Ensure the message is on top of everything */
+}
+
+/* Game Over Title */
+.game-over-message h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: #f44336; /* Bright red for "Game Over" */
+}
+
+/* Game Over Subtitle */
+.game-over-message p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
